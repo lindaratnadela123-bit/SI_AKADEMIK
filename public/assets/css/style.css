@@ -1,0 +1,168 @@
+/* ===== Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* ===== Token Warna ===== */
+:root {
+    --navy-900: #131c33;
+    --navy-800: #1b2a4a;
+    --navy-600: #2e4374;
+    --gold-500: #c9a227;
+    --paper: #f6f5f2;
+    --ink: #1f2430;
+    --ink-muted: #5b6270;
+    --line: #dfe1e6;
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', Georgia, serif;
+    color: var(--navy-900);
+    margin: 0 0 0.4em;
+}
+
+a { color: var(--navy-600); text-decoration: none; }
+a:hover { color: var(--gold-500); }
+
+/* ===== Navbar ===== */
+.navbar {
+    background: var(--navy-900);
+    padding: 0 2rem;
+}
+.navbar-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+.navbar .brand {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--white);
+}
+.navbar .brand:hover { color: var(--gold-500); }
+.nav-links a {
+    color: #c7cce0;
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+.nav-links a:hover { color: var(--gold-500); }
+.nav-links a.logout-link { color: #e3a9a9; }
+.nav-links a.logout-link:hover { color: #ff6b6b; }
+
+/* ===== Layout ===== */
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+}
+
+.card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gold-500);
+    border-radius: 4px;
+    padding: 2rem;
+}
+
+.subtitle {
+    color: var(--ink-muted);
+    margin-top: -0.3em;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Tabel ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+thead {
+    background: var(--navy-800);
+}
+thead th {
+    color: var(--white);
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 500;
+    font-size: 0.92rem;
+}
+tbody td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--line);
+}
+tbody tr:hover { background: #fbf8ee; }
+
+/* ===== Form (Login) ===== */
+.login-wrap {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, var(--navy-600), var(--navy-900));
+}
+.login-card {
+    background: var(--white);
+    width: 360px;
+    padding: 2.5rem;
+    border-radius: 6px;
+    border-top: 4px solid var(--gold-500);
+}
+.login-card h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.2em;
+}
+.field { margin-bottom: 1.1rem; }
+.field label {
+    display: block;
+    font-size: 0.88rem;
+    color: var(--ink-muted);
+    margin-bottom: 0.35rem;
+}
+.field input {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+.field input:focus {
+    outline: none;
+    border-color: var(--gold-500);
+}
+.btn {
+    width: 100%;
+    background: var(--navy-800);
+    color: var(--white);
+    border: none;
+    padding: 0.7rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn:hover { background: var(--navy-600); }
+
+.alert-error {
+    background: #fdecea;
+    border: 1px solid #f2c2bd;
+    color: #9c2b23;
+    padding: 0.6rem 0.9rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - SI Akademik</title>
+    <link rel="stylesheet" href="/SI_AKADEMIK/public/assets/css/style.css">
+</head>
+<body>
+    <?php require_once __DIR__ . '/../partials/nav.php'; ?><nav class="navbar">
+    <div class="navbar-inner">
+        <a href="/SI_AKADEMIK/public/dashboard" class="brand">SI Akademik</a>
+        <div class="nav-links">
+            <a href="/SI_AKADEMIK/public/dashboard">Dashboard</a>
+            <a href="/SI_AKADEMIK/public/mahasiswa">Mahasiswa</a>
+            <a href="/SI_AKADEMIK/public/dosen">Dosen</a>
+            <a href="/SI_AKADEMIK/public/logout" class="logout-link">Logout</a>
+        </div>
+    </div>
+</nav>
+
+    <div class="page">
+        <div class="card">
+            <h1>Sistem Informasi Akademik</h1>
+            <p class="subtitle">Selamat datang, <?= htmlspecialchars($_SESSION['username']) ?>.</p>
+            <p>Gunakan menu di atas untuk membuka data Mahasiswa atau Dosen.</p>
+        </div>
+    </div>
+</body>
+</html>
